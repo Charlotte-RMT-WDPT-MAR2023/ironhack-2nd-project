@@ -1,0 +1,41 @@
+<h1>Potluck Dinner Suggestions</h1>
+<form>
+  <label for="dishName">Dish Name:</label>
+  <input type="text" id="dishName" name="dishName" required /><br /><br />
+
+  <fieldset>
+    <legend>Allergens:</legend>
+    <label><input type="checkbox" name="allergens" value="peanuts" />
+      Peanuts</label><br />
+    <label><input type="checkbox" name="allergens" value="tree-nuts" />
+      Tree Nuts</label><br />
+    <label><input type="checkbox" name="allergens" value="shellfish" />
+      Shellfish</label><br />
+    <label><input type="checkbox" name="allergens" value="fish" />
+      Fish</label><br />
+    <label><input type="checkbox" name="allergens" value="milk" />
+      Milk</label><br />
+    <label><input type="checkbox" name="allergens" value="eggs" />
+      Wheat</label><br />
+    <label><input type="checkbox" name="allergens" value="soy" /> Soy</label><br
+    />
+  </fieldset>
+  <br />
+
+  <label for="dietaryRequirements">Dietary Requirements:</label>
+  <select id="dietaryRequirements" name="dietaryRequirements" multiple>
+    <option value="vegan">Vegan</option>
+    <option value="vegetarian">Vegetarian</option>
+    <option value="gluten-free">Gluten-free</option>
+    <option value="dairy-free">Dairy-free</option></select><br /><br />
+
+  <label for="recipeLink">Recipe Link:</label>
+  <input type="url" id="recipeLink" name="recipeLink" /><br /><br />
+
+  <button type="button" onclick="addSuggestion()">Add Suggestion</button><br
+  /><br />
+
+  <ul id="suggestionList"></ul>
+
+  <input type="submit" value="Submit" />
+</form>

@@ -1,0 +1,111 @@
+<h1>RSVP Form</h1>
+<form id="rsvpForm" onsubmit="submitForm(event)">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required /><br /><br />
+
+  <label for="attend">Attendance:</label>
+  <select
+    id="attend"
+    name="attend"
+    required
+    onchange="handleAttendanceChange()"
+  >
+    <option value="">- Select -</option>
+    <option value="yes">Yes, I will attend</option>
+    <option value="no">No, I will not attend</option>
+  </select><br /><br />
+
+  <div id="guestsContainer" style="display: none;">
+    <label for="guests">Number of Guests:</label>
+    <input type="number" id="guests" name="guests" min="0" /><br /><br />
+  </div>
+
+  <div id="guestNamesContainer" style="display: none;">
+    <label>Guest Names:</label><br />
+    <div id="guestNames"></div><br />
+  </div>
+
+  <div id="dietaryContainer" style="display: none;">
+    <label>Would you like to provide any dietary or allergy information for your
+      group?</label><br />
+    <div id="dietaryNames"></div><br />
+    <button type="button" onclick="handleDietaryInformation()">Yes</button><br
+    /><br />
+    <button type="button" onclick="handleMealInformation()">No</button><br /><br
+    />
+  </div>
+  <div id="dietaryInfo" style="display: none;">
+    <fieldset>
+      <legend>Allergens:</legend>
+      <label><input type="checkbox" name="alleryInfo" value="peanuts" />
+        Peanuts</label><br />
+      <label><input type="checkbox" name="alleryInfo" value="tree-nuts" />
+        Tree Nuts</label><br />
+      <label><input type="checkbox" name="alleryInfo" value="shellfish" />
+        Shellfish</label><br />
+      <label><input type="checkbox" name="alleryInfo" value="fish" />
+        Fish</label><br />
+      <label><input type="checkbox" name="alleryInfo" value="milk" />
+        Milk</label><br />
+      <label><input type="checkbox" name="alleryInfo" value="eggs" />
+        Wheat</label><br />
+      <label><input type="checkbox" name="alleryInfo" value="soy" />
+        Soy</label><br />
+    </fieldset>
+    <br />
+
+    <fieldset>
+      <legend>Dietary Requirements:</legend>
+      <label><input type="checkbox" name="dietaryInfo" value="vegan" />
+        Vegan</label><br />
+      <label><input type="checkbox" name="dietaryInfo" value="vegetarian" />
+        Vegetarian</label><br />
+      <label><input type="checkbox" name="dietaryInfo" value="gluten-free" />
+        Gluten-free</label><br />
+      <br />
+    </fieldset>
+    <br />
+    <button type="button" onclick="handleMealInformation()">Continue</button><br
+    /><br />
+  </div>
+
+  <div id="mealDetailsContainer" style="display: none;">
+    <label for="meal">Meal Details:</label><br />
+    <textarea id="meal" name="meal" rows="4" cols="50"></textarea><br /><br />
+
+    <fieldset>
+      <legend>Allergens:</legend>
+      <label><input type="checkbox" name="mealAllergens" value="peanuts" />
+        Peanuts</label><br />
+      <label><input type="checkbox" name="mealAllergens" value="tree-nuts" />
+        Tree Nuts</label><br />
+      <label><input type="checkbox" name="mealAllergens" value="shellfish" />
+        Shellfish</label><br />
+      <label><input type="checkbox" name="mealAllergens" value="fish" />
+        Fish</label><br />
+      <label><input type="checkbox" name="mealAllergens" value="milk" />
+        Milk</label><br />
+      <label><input type="checkbox" name="mealAllergens" value="eggs" />
+        Wheat</label><br />
+      <label><input type="checkbox" name="mealAllergens" value="soy" />
+        Soy</label><br />
+    </fieldset>
+    <br />
+
+    <fieldset>
+      <legend>Dietary Requirements:</legend>
+      <label><input type="checkbox" name="mealDietary" value="vegan" />
+        Vegan</label><br />
+      <label><input type="checkbox" name="mealDietary" value="vegetarian" />
+        Vegetarian</label><br />
+      <label><input type="checkbox" name="mealDietary" value="gluten-free" />
+        Gluten-free</label><br />
+      <br />
+    </fieldset>
+    <br />
+    <input type="submit" value="Submit" />
+  </div>
+
+</form>
+
+<script src="/js/rsvp.js"></script>
