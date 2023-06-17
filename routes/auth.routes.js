@@ -80,9 +80,7 @@ router.get("/userProfile", (req, res) => {
 
 router.get("/userProfile", (req, res) => res.render("users/user-profile"));
 
-router.get("/event", (req, res) => res.render("users/user-event"));
-router.get("/suggestions", (req, res) => res.render("users/user-suggestions"));
-router.get("/rsvp", (req, res) => res.render("guests/rsvp"));
+
 
 router.post("/logout", (req, res, next) => {
   req.session.destroy((err) => {

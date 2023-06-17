@@ -21,13 +21,3 @@ function addGuestField() {
   guestCounter++;
 }
 
-document.getElementById("inviteMethod").addEventListener("change", function () {
-  var inviteMethod = this.value;
-  var emailField = document.getElementById("emailField");
-
-  if (inviteMethod === "email") {
-    emailField.style.display = "block";
-  } else {
-    emailField.style.display = "none";
-  }
-});

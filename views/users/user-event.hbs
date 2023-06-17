@@ -8,11 +8,20 @@
 
     <label for="location">Location:</label>
     <input type="text" id="location" name="location" required><br><br>
+
+<label for="inviteMethod">Invite Method:</label>
+    <section id="inviteMethod" name="inviteMethod" required>
+      <button type="button" onclick="getEventLink()">Get Event Link</button>
+      <p>Send invitations yourself. Anyone with the link can RSVP to this event</p><br>
+      <button type="button" onclick="enterGuestInfo()">Send Invite to Email</button>
+      <p>Enter the names and email addresses of your guest and we'll send an invitation for you.</p>
+    </section><br><br>
+
     <h2>Guests</h2>
     <div id="guestFields">
       
       <div id="guestFields">
-        <div id="guest1">
+        <div class = "guest" id="guest1">
           <label for="name1">Name:</label>
           <input type="text" id="name1" name="guests[][name]" required>
   
@@ -20,7 +29,7 @@
           <input type="email" id="email1" name="guests[][email]">
         </div>
   
-        <div id="guest2">
+        <div class = "guest" id="guest2">
           <label for="name2">Name:</label>
           <input type="text" id="name2" name="guests[][name]" required>
   
@@ -28,7 +37,7 @@
           <input type="email" id="email2" name="guests[][email]">
         </div>
   
-        <div id="guest3">
+        <div class = "guest" id="guest3">
           <label for="name3">Name:</label>
           <input type="text" id="name3" name="guests[][name]" required>
   
@@ -36,7 +45,7 @@
           <input type="email" id="email3" name="guests[][email]">
         </div>
 
-        <div id="guest4">
+        <div class = "guest" id="guest4">
           <label for="name4">Name:</label>
           <input type="text" id="name4" name="guests[][name]" required>
   
@@ -44,7 +53,7 @@
           <input type="email" id="email4" name="guests[][email]">
         </div>
 
-        <div id="guest5">
+        <div class = "guest" id="guest5">
           <label for="name5">Name:</label>
           <input type="text" id="name5" name="guests[][name]" required>
   
@@ -52,21 +61,14 @@
           <input type="email" id="email5" name="guests[][email]">
         </div>
 
-    <button type="button" onclick="addGuestField()">Add Guest</button><br><br>
+    
 
-    <label for="inviteMethod">Invite Method:</label>
-    <select id="inviteMethod" name="inviteMethod" required>
-      <option value="email">Send Invite to Email</option>
-      <option value="link">Get Event Link</option>
-    </select><br><br>
-
-    <div id="emailField" style="display: none;">
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email"><br><br>
     </div>
+</div>
+  <button type="button" onclick="addGuestField()">Add Guest</button><br><br>
 
-    <input type="submit" value="Submit">
+    <button type="button">Send Emails</button>
   </form>
 
 
-<script src="event.js"></script>
+<script src="/js/event.js"></script>

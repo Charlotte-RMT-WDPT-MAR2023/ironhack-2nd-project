@@ -112,3 +112,19 @@ ul li {
 #logout-form button {
   width: 120px;
 }
+
+.checkbox-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-grid label {
+  flex-basis: calc(33.33% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* user-event styling*/
+.guest {
+  display: flex;
+}
